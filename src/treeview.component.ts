@@ -96,8 +96,8 @@ export class TreeItem {
 }
 
 .treeview-item .form-check-label {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .treeview-item .fa {

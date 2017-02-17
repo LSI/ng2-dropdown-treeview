@@ -65,7 +65,7 @@ export let DefaultConfig: DropdownTreeviewConfig = {
 @Component({
     selector: 'leo-dropdown-treeview',
     template: `
-<div class="dropdown" [class.open]="isOpen">
+<div class="dropdown" [class.show]="isOpen">
     <button class="btn btn-secondary dropdown-toggle" #dropdownButton type="button" (click)="toggleOpen()"
     aria-haspopup="true" aria-expanded="false">
         {{text}}
@@ -127,7 +127,7 @@ export let DefaultConfig: DropdownTreeviewConfig = {
 }
 
 .dropdown .dropdown-menu .row {
-    padding: 2px 10px;
+    padding: 2px 20px;
 }
 
 .dropdown .dropdown-menu .dropdown-item-collapse-expand {
@@ -151,7 +151,7 @@ export class DropdownTreeviewComponent implements OnChanges {
     @Output() selectedChange = new EventEmitter<any[]>();
     allItem = new TreeItem(this.config.headerText);
     isOpen = false;
-    text = this.config.allText;
+    text = this.config.noSelectText;
     filterText: string;
     filterItems: TreeItem[];
 
